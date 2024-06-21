@@ -1,0 +1,29 @@
+C:\kafka\bin\windows>
+
+1)lunch zookeeper
+.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+
+2)lunch kafka
+.\bin\windows\kafka-server-start.bat .\config\server.properties
+
+3)start producer
+kafka-console-producer.bat --broker-list localhost:9092 --topic Otopic
+
+4)start consumer 
+kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic topic2
+kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic ouTopic
+
+
+
+create producer 
+kafka-topics.bat --create --bootstrap-server localhost:9092  --topic topic1
+
+delete topic 
+kafka-topics.sh --zookeeper localhost:2181 --delete --topic Topic
+
+//to delete logs
+c:/kafka/kafka-logs
+
+//restart kafka 
+
+C:\kafka\bin\windows\kafka-server-start.bat C:\kafka\config\server.properties
